@@ -11,9 +11,31 @@
 
 package com.company;
 
-public class Main {
+public class Triangle {
+    private double base;
+    private double height;
+    private double area;
 
-    public static void main(String[] args) {
-	// write your code here
+    public void setBase(double triBase){
+        base = triBase;
     }
+
+    public double getBase(){
+        return base;
+    }
+
+    public void setHeight(double triHeight){
+        height = triHeight;
+    }
+
+    public double getHeight(){
+        return height;
+    }
+
+    public double getArea(){
+        area = (height * base) /2;
+        return area;
+    }
+
+
 }
