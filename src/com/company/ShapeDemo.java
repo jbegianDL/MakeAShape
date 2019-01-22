@@ -15,8 +15,19 @@ import java.util.Scanner;
 public class ShapeDemo {
 
     public static void main(String[] args) {
+        String lineBreak = "\n";
+        String prompt = "Please choose a shape: " + lineBreak + "1 - Triangle" + lineBreak + "2 - Square" + " 3 - Circle";
         Triangle myTriangle = new Triangle();
 	    Scanner input = new Scanner(System.in);
+
+	    System.out.println(prompt);
+
+	    int choice = input.nextInt();
+	    switch(choice){
+            case 1:
+                System.out.println("Triangle selected!");
+                System.out.println("Please enter a value for the base");
+        }
 
         myTriangle.setBase(input.nextDouble());
         myTriangle.setHeight(input.nextDouble());

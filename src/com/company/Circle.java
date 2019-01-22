@@ -15,4 +15,26 @@ public class Circle {
     private double radius;
     private double diameter;
     private double circumference;
+
+    public void setRadius(double cirRadius){
+        radius = cirRadius;
+    }
+
+    public double getRadius(){
+        return radius;
+    }
+
+    public void setDiameter(double cirDiameter){
+        diameter = cirDiameter;
+    }
+
+    public double getDiameter(){
+        return diameter;
+    }
+
+    public double getCircumference(){
+        circumference = (2 * Math.PI * radius);
+        return circumference;
+    }
+
 }

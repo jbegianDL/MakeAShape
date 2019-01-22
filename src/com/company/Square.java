@@ -15,4 +15,25 @@ public class Square {
     private double width;
     private double height;
     private double area;
+
+    public void setWidth(double sqrWidth){
+        width = sqrWidth;
+    }
+
+    public double getWidth(){
+        return width;
+    }
+
+    public void setHeight(double sqrHeight){
+        height = sqrHeight;
+    }
+
+    public double getHeight(){
+        return height;
+    }
+
+    public double getArea(){
+        area = width * height;
+        return area;
+    }
 }
