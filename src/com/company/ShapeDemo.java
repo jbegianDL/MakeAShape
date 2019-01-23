@@ -17,41 +17,62 @@ public class ShapeDemo {
     public static void main(String[] args) {
         String lineBreak = "\n";
         String prompt = "Please choose a shape: " + lineBreak + "1 - Triangle" + lineBreak + "2 - Square" + lineBreak + "3 - Circle";
+        String continuePrompt = lineBreak +"Would you like to make a new shape?" + lineBreak + "1 - Yes" + lineBreak + "2 - No";
+        boolean usrContinue = false;
         Triangle myTriangle = new Triangle();
         Square mySquare = new Square();
         Circle myCircle = new Circle();
 	    Scanner input = new Scanner(System.in);
 
-	    System.out.println(prompt);
 
-	    int choice = input.nextInt();
-	    switch(choice){
-            case 1:
-                System.out.println("Triangle selected!");
-                System.out.println("Please enter a value for the base");
-                myTriangle.setBase(input.nextDouble());
-                System.out.println("Please enter a value for the height");
-                myTriangle.setHeight(input.nextDouble());
-                myTriangle.printInfo();
-                break;
-            case 2:
-                System.out.println("Square selected!");
-                System.out.println("Please enter a value for the width");
-                mySquare.setWidth(input.nextDouble());
-                System.out.println("Please enter a value for the height");
-                mySquare.setHeight(input.nextDouble());
-                mySquare.printInfo();
-                break;
-            case 3:
-                System.out.println("Circle selected!");
-                System.out.println("Please enter a value for the radius");
-                myCircle.setRadius(input.nextDouble());
-                myCircle.printInfo();
-                break;
-            default:
-                System.out.println("Error - Incorrect input");
-        }
+	    do{
+            System.out.println(prompt);
 
+            int choice = input.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.println("Triangle selected!");
+                    System.out.println("Please enter a value for the base");
+                    myTriangle.setBase(input.nextDouble());
+                    System.out.println("Please enter a value for the height");
+                    myTriangle.setHeight(input.nextDouble());
+                    myTriangle.printInfo();
+                    break;
+                case 2:
+                    System.out.println("Square selected!");
+                    System.out.println("Please enter a value for the width");
+                    mySquare.setWidth(input.nextDouble());
+                    System.out.println("Please enter a value for the height");
+                    mySquare.setHeight(input.nextDouble());
+                    mySquare.printInfo();
+                    break;
+                case 3:
+                    System.out.println("Circle selected!");
+                    System.out.println("Please enter a value for the radius");
+                    myCircle.setRadius(input.nextDouble());
+                    myCircle.printInfo();
+                    break;
+                default:
+                    System.out.println("Error - Incorrect input");
+            }
+
+            System.out.println(continuePrompt);
+            int continueChoice = input.nextInt();
+
+            switch(continueChoice){
+                case 1:
+                    usrContinue = true;
+                    break;
+                case 2:
+                    System.out.println("Goodbye");
+                    usrContinue = false;
+                    break;
+                default:
+                    System.out.println("Error - Incorrect input");
+                    usrContinue = false;
+            }
+
+        }while(usrContinue);
 
 
     }
