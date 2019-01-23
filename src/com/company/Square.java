@@ -32,8 +32,8 @@ public class Square {
         return height;
     }
 
-    public double getArea(){
+    public void printInfo(){
         area = width * height;
-        return area;
+        System.out.print("Width is: " + width + " -- Height is: " + height + " -- Area is : " + area);
     }
 }

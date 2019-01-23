@@ -24,17 +24,10 @@ public class Circle {
         return radius;
     }
 
-    public void setDiameter(double cirDiameter){
-        diameter = cirDiameter;
-    }
-
-    public double getDiameter(){
-        return diameter;
-    }
-
-    public double getCircumference(){
+    public void printInfo(){
+        diameter = radius * 2
         circumference = (2 * Math.PI * radius);
-        return circumference;
+        System.out.println("Radius is: " + radius + " -- Diameter is: " + diameter + " -- Circumference is: " + circumference);
     }
 
 }

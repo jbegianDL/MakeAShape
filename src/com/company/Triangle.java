@@ -20,21 +20,13 @@ public class Triangle {
         base = triBase;
     }
 
-    public double getBase(){
-        return base;
-    }
-
     public void setHeight(double triHeight){
         height = triHeight;
     }
 
-    public double getHeight(){
-        return height;
-    }
-
-    public double getArea(){
-        area = (height * base) /2;
-        return area;
+    public void printInfo(){
+        area = (base * height)/2;
+        System.out.println("Base is: " + base + " -- Height is: " + height + " -- Area is: " + area);
     }
 
 

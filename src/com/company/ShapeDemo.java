@@ -16,8 +16,10 @@ public class ShapeDemo {
 
     public static void main(String[] args) {
         String lineBreak = "\n";
-        String prompt = "Please choose a shape: " + lineBreak + "1 - Triangle" + lineBreak + "2 - Square" + " 3 - Circle";
+        String prompt = "Please choose a shape: " + lineBreak + "1 - Triangle" + lineBreak + "2 - Square" + lineBreak + "3 - Circle";
         Triangle myTriangle = new Triangle();
+        Square mySquare = new Square();
+        Circle myCircle = new Circle();
 	    Scanner input = new Scanner(System.in);
 
 	    System.out.println(prompt);
@@ -27,12 +29,24 @@ public class ShapeDemo {
             case 1:
                 System.out.println("Triangle selected!");
                 System.out.println("Please enter a value for the base");
+                myTriangle.setBase(input.nextDouble());
+                System.out.println("Please enter a value for the height");
+                myTriangle.setHeight(input.nextDouble());
+                myTriangle.printInfo();
+                break;
+            case 2:
+                System.out.println("Square selected!");
+                System.out.println("Please enter a value for the width");
+                mySquare.setWidth(input.nextDouble());
+                System.out.println("Please enter a value for the height");
+                mySquare.setHeight(input.nextDouble());
+                mySquare.printInfo();
+                break;
+            case 3:
+                System.out.println("Circle selected!");
+                System.out.println("Please enter a value for the radius");
+                myCircle.setRadius(input.nextDouble());
         }
-
-        myTriangle.setBase(input.nextDouble());
-        myTriangle.setHeight(input.nextDouble());
-        System.out.println(myTriangle.getArea());
-
 
 
 
