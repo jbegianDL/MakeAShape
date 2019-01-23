@@ -25,7 +25,7 @@ public class Circle {
     }
 
     public void printInfo(){
-        diameter = radius * 2
+        diameter = radius * 2;
         circumference = (2 * Math.PI * radius);
         System.out.println("Radius is: " + radius + " -- Diameter is: " + diameter + " -- Circumference is: " + circumference);
     }

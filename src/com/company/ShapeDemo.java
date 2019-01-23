@@ -46,6 +46,10 @@ public class ShapeDemo {
                 System.out.println("Circle selected!");
                 System.out.println("Please enter a value for the radius");
                 myCircle.setRadius(input.nextDouble());
+                myCircle.printInfo();
+                break;
+            default:
+                System.out.println("Error - Incorrect input");
         }
 
 
